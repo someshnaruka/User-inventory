@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 function Modal(props) {
   const dispatch = useDispatch();
-  console.log(props.value, "hejnrt");
+ 
   const [detail, setDetails] = useState(
     props.check
       ? {
@@ -38,7 +38,7 @@ function Modal(props) {
       };
     });
   }
-  console.log(detail);
+ 
   function handleSubmit(e) {
     e.preventDefault();
     if (
@@ -51,7 +51,7 @@ function Modal(props) {
       detail.id
     ) {
       if (props.action === "ADD") {
-        console.log(detail);
+        
         dispatch(addRedux(detail));
       } else {
         dispatch(editRedux(detail));

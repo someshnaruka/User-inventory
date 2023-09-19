@@ -7,7 +7,7 @@ import { deleteRedux } from "../features/userSlice";
 function Hero() {
   const data = useSelector((state) => state.user.cardData);
   const dispatch=useDispatch();
-  console.log(data, "user data");
+
   const [modal, setModal] = useState(false);
   const [action, setAction] = useState("");
   const [currentPage, setcurrentPage] = useState(1);
@@ -17,7 +17,7 @@ function Hero() {
   const firstIndex = lastIndex - postPerPage;
   const totalPage=Math.floor(data.length/postPerPage)+1;
   const filterpost = data.slice(firstIndex, lastIndex);
-console.log(totalPage,"total page")
+
   
   function handlePrev(){
     if(firstIndex!=0)
@@ -27,7 +27,8 @@ console.log(totalPage,"total page")
 
   }
   function handleNext(){
-    if(lastIndex!=data.length)
+ 
+    if(currentPage!=totalPage)
     {
         setcurrentPage(currentPage+1);
     }

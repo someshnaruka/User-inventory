@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Modal from './Modal';
 
 function Card({data,ondelete,onEdit,onView}) {
-    console.log(data,"card data");
+  
 const [color,setcolor]=useState("");
 const [modal, setModal] = useState(false);
   const [action, setAction] = useState("");
